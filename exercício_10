@@ -1,0 +1,25 @@
+10. Criar uma função que calcule e retorne o MAIOR entre dois valores recebidos como
+parâmetros. Um algoritmo para testar tal função deve ser criado.
+
+<?php
+function maior($n,$n2){
+    if($n>$n2){
+        $maior=$n;
+        return $maior;
+    }else{
+        $maior=$n2;
+        return $maior; 
+    }
+}
+
+echo "Digite o primeiro valor:\n";
+$n= (int) fgets (STDIN);
+echo "Digite o segundo valor:\n";
+$n2= (int) fgets (STDIN);
+$maior= maior($n,$n2);
+
+If($maior==$n){
+    echo "O maior numero é $n \n";
+}else{
+    echo "O maior numero é $n2 \n";
+}
