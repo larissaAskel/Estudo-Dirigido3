@@ -1,0 +1,19 @@
+6. Escreva uma função que recebe 2 números inteiros n1 e n2 como entrada e retorna a
+soma de todos os números inteiros contidos no intervalo [ n1 , n2 ]. Use esta função em
+um programa que lê n1 e n2 do usuário e imprime a soma.
+
+<?php
+
+ function calcsoma($n1,$n2){
+     $soma=0;
+     for($i=$n1;$i<=$n2;$i++){
+     $soma=$soma+$i;
+    }
+    return $soma;
+ }
+ echo"Digite um valor:";
+ $n1=(int) fgets (STDIN);
+ echo"Digite outro valor:";
+ $n2=(int) fgets (STDIN);
+ $soma= calcsoma($n1,$n2);
+ echo"".$soma."\n";
