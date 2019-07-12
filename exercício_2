@@ -1,0 +1,15 @@
+2. Faça uma função que calcule a hipotenusa. Os catetos são os dados de entrada e a
+hipotenusa é o dado de saída.
+
+<?php
+print"Digite o valor de um dos catetos \n";
+$CA=(int) fgets (STDIN);
+print"Digite o valor de outro cateto \n";
+$CB=(int) fgets (STDIN);
+
+function hipotenusa($CA,$CB){
+$hipo=sqrt($CA*$CA+$CB*$CB);
+return $hipo;
+}
+$hipo= hipotenusa($CA,$CB);
+print"O valor da hipotenusa deste triangulo é \n".$hipo;
