@@ -1,0 +1,26 @@
+7. Escreva uma função que receba um número inteiro e imprima o mês correspondente
+ao número. Por exemplo, 2 corresponde a “ fevereiro ”. O procedimento deve mostrar
+uma mensagem de erro caso o número recebido não faça sentido. Gere também um
+programa que leia um valor e chame a função criada.
+
+<?php
+
+function mesdoano($mes){
+    $mes = $mes - 1;
+    $mes_ext = array("janeiro", "fevereiro", "março", "abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro");
+    if ($mes>11 or $mes<0){
+      $mes=0;
+      return $mes;
+    }else{
+        return ($mes_ext[$mes]);
+    }
+}
+
+echo"Digite um mês: \n";
+$mes=(int) fgets (STDIN);
+$mesfinal= mesdoano($mes);
+if($mesfinal==0){
+    echo"Erro";
+}else{
+echo"O mês que você digitou foi".$mesfinal."\n";
+}
