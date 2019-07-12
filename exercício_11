@@ -1,0 +1,14 @@
+11. Crie uma função que realize a conversão de Polegadas (pol) para Centímetros (cm),
+onde pol é passado como parâmetro e cm é retornado. Sabe-se que 1 polegada tem
+2.54 centímetros. Crie também um programa para testar tal função.
+
+<?php
+
+function conversor($n){
+$conversão=$n*2.54;
+return $conversão;
+}
+echo "Digite um valor em polegadas:";
+$n= (int) fgets (STDIN);
+$conversor= conversor($n);
+echo"A conversão do numero em polegadas para cm é ".$conversor."\n";
