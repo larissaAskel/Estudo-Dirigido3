@@ -1,0 +1,30 @@
+9. Escreva uma função que receba dois números inteiros x e y. Essa função deve
+verificar se x é divisível por y. No caso positivo, a função deve retornar 1, caso
+contr ár io zero. Escreva tamb ém um programa para testar tal função.
+
+<?php
+ 
+function contanumeros($N1,$N2){
+
+$div=$N1/$N2;
+$resto=($div%2);
+
+if($resto>0){
+    $Nresto=0;
+    return $Nresto;
+}else{
+    $Nresto=1;
+    return $Nresto;
+}
+
+}
+echo "Digite um numero:\n";
+$N1= (int) fgets (STDIN);
+echo "Digite um numero:\n";
+$N2= (int) fgets (STDIN);
+$contanumeros= contanumeros($N1,$N2);
+if($contanumeros=0){
+echo "Esse número é divisivel pelo outro, resultado:".$contanumeros."\n";  
+}else{
+echo "Esse número não é divisivel pelo outro, resultado:".$contanumeros."\n";
+}
