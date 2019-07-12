@@ -1,0 +1,28 @@
+8. Escreva uma função que receba um número natural e imprima os três primeiros
+caracteres do dia da semana correspondente ao número. Por exemplo, 7 corresponde
+a “SAB”. O procedimento deve mostrar uma mensagem de erro caso o número
+recebido não corresponda a um dia da semana. Gere também um programa que
+utilize essa função, chamando-a, mas antes lendo um valor para passagem de
+parâmetro.
+
+<?php
+
+function diadasemana($dia){
+    $dia = $dia - 1;
+    $dia_ext = array("dom", "seg", "ter", "qua","qui","sex","sab");
+    if ($dia>7 or $dia<0){
+        $dia=0;
+        return $dia;
+    }else{
+        return ($dia_ext[$dia]);
+    }
+}
+
+echo"Digite um dia da semana: \n";
+$dia=(int) fgets (STDIN);
+$diafinal= diadasemana($dia);
+if($diafinal==0){
+    echo"Erro";
+}else{
+    echo"O dia que você digitou foi \n".$diafinal."\n";
+}
