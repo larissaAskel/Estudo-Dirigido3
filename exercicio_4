@@ -1,0 +1,26 @@
+4. Faça um programa que leia a altura e o sexo (codificado da seguinte forma:
+1-feminino 2-masculino) de uma pessoa. Depois faça uma função chamada pesoideal
+que receba a altura e o sexo via parâmetro e que calcule e retorne seu peso ideal,
+utilizando as seguintes fórmulas:
+• para homens: (72.7 * h) – 58
+• para mulheres: (62.1 * h) – 44.7
+Observação: Altura = h (na fórmula acima).
+
+<?php
+
+function pesoideal($h,$N){
+    if ($N<>1){
+        $Peso=(72.78*$h)-58;
+        echo"O seu peso ideal é: ".$Peso."\n";
+    }else{
+        $Peso=(62.1*$h)-44.7;
+        echo"O seu peso ideal é: ".$Peso."\n"; 
+    }
+}
+
+echo"Digite seu sexo (1-Feminino 2-Masculino) :";
+$N=(int) fgets (STDIN);
+echo"Digite sua altura";
+$h=(float) fgets (STDIN);
+
+pesoideal($h,$N);
